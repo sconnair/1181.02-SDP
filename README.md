@@ -1,8 +1,8 @@
-# 11/19/2024
+# 1181.02-SDP - The Sphinx Game Suite
 
-**FE 1181.02**  
+The Sphinx Game Suite is a collection of games coded in MATLAB for the Fundamentals of Engineering I Software Design Project
+
 **Team A - "The Sphinxes" - SDP Project**  
-**Instr: Kecskemety, 9:10**
 
 ---
 
