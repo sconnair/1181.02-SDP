@@ -1,0 +1,46 @@
+function playAgain = again(playAgain)
+    
+    close all;
+    % Create a figure window
+    fig = figure('Name', 'Again?', 'NumberTitle', 'off');
+    
+    % Add a title at the top
+    titleText = uicontrol('Style', 'text', ...
+        'String', 'Waste Money Again?', ...
+        'FontSize', 40, ...
+        'FontWeight', 'bold', ...
+        'ForegroundColor', 'magenta', ...
+        'BackgroundColor', get(fig, 'Color'), ...
+        'Position', [475, 300, 500, 140]); % [x, y, width, height]
+    
+    % Add buttons for the three options
+    buttonAgain = uicontrol('Style', 'pushbutton', ...
+        'String', 'YES', ...
+        'FontSize', 15, ...
+        'Position', [650, 250, 150, 50], ...
+        'Callback', @(src, event) setAgain(true));
+    
+    
+    buttonExit = uicontrol('Style', 'pushbutton', ...
+        'String', 'NO', ...
+        'FontSize', 15, ...
+        'Position', [650, 150, 150, 50], ...
+        'Callback', @(src, event) setAgain(false));
+    
+    % Variable to store the selected balance
+    
+        function setAgain(choice)
+            % Callback to set the balance and close the figure
+            playAgain = choice;
+            uiresume(fig); % Resume execution after button click
+        end
+    
+    % Pause execution until a button is clicked
+    uiwait(fig);
+    
+    % Assign the selected balance to the output
+    
+    % Close the figure
+    close(fig);
+    
+end
